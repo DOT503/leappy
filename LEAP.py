@@ -30,6 +30,7 @@ class LocalEnum:
         # use shellex to convert the string to unix format
         params = shlex.split(params)
         subprocess.call(params)  # call subprocess to relaunch the shell
+        return 0
 
     # Function to list system user with domain name
     def get_system_user_list(self):

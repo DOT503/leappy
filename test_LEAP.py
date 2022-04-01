@@ -14,3 +14,8 @@ class TestEnum (unittest.TestCase):
             self.assertIsNone(LocalEnum.get_system_user_list(self), "result")
         except AssertionError as msg:
             print(msg)
+    def test_elevate(self):
+        try:
+            self.assertIsNone(LocalEnum.get_system_user_list(self), 0)
+        except AssertionError as msg:
+            print(msg)
