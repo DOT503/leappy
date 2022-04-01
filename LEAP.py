@@ -30,6 +30,7 @@ class LocalEnum:
         # use shellex to convert the string to unix format
         params = shlex.split(params)
         subprocess.call(params)  # call subprocess to relaunch the shell
+        return 0
 
     # Function to list system user with domain name
     def get_system_user_list(self):
@@ -43,6 +44,7 @@ class LocalEnum:
                 pass
             table.add_row([usr[0], group_name[0]])
         print(table)  # print the result
+        return table.get_string
 
     # Function to do the ns_lookup
     def ns_lookup(self, domain_name):
