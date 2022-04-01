@@ -43,7 +43,7 @@ class LocalEnum:
                 pass
             table.add_row([usr[0], group_name[0]])
         print(table)  # print the result
-        return table
+        return table.get_string
 
     # Function to do the ns_lookup
     def ns_lookup(self, domain_name):
